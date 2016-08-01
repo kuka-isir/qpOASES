@@ -11,6 +11,7 @@ ExternalProject_Add(
    qpOASES
    SVN_REPOSITORY https://projects.coin-or.org/svn/qpOASES/stable/3.2
    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CATKIN_DEVEL_PREFIX}
+   UPDATE_COMMAND sed -i "s/-DLINUX/-DLINUX -fPIC/g" CMakeLists.txt
    SOURCE_DIR ${PROJECT_SOURCE_DIR}/qpOASES_svn
 )
 
