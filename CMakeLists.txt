@@ -22,3 +22,7 @@ install(
   DESTINATION ${CMAKE_INSTALL_PREFIX}
   PATTERN ".svn" EXCLUDE
   )
+install(
+  TARGET qpOASES
+  DESTINATION lib
+  )
